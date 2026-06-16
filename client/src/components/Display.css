@@ -1,0 +1,77 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button {
+  background: linear-gradient(135deg, #ff4f4f, #ff1f1f);
+  border-radius: 10px;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #ff1f1f, #c82333);
+}
+
+.logs {
+  background: #1e1e1e;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  max-width: 700px;
+  overflow: auto;
+  text-align: left;
+}
+
+.logs h3 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.logs ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.logs li {
+  padding: 8px;
+  border-bottom: 1px solid #555;
+}
+
+.logs button {
+  display: block;
+  margin: 10px auto;
+  background: #ff4f4f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logs button:hover {
+  background: #ff1f1f;
+}
+.image-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.image-list img {
+  max-width: 100%; /* ✅ Ensure image fits within grid */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+  object-fit: cover; /* ✅ Prevent image distortion */
+  max-height: 300px; /* ✅ Set a max height to keep uniform images */
+}

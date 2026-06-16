@@ -1,0 +1,28 @@
+/* Hide default cursor */
+body, button, input, a {
+  cursor: none;
+}
+
+/* Custom Cursor */
+.cursor {
+    position: fixed;
+    width: 15px; /* Adjust size */
+    height: 15px;
+    background: radial-gradient(circle, #ffcc00, #ff6600); /* Gradient effect */
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.05s linear, scale 0.1s ease-in-out, opacity 0.2s ease;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+    z-index: 9999;
+    mix-blend-mode: difference; /* Ensures visibility */
+}
+
+/* Hover effect: Cursor enlarges when hovering over buttons/links */
+button:hover, a:hover {
+  cursor: none;
+}
+
+button:hover ~ .cursor, a:hover ~ .cursor {
+  transform: scale(1.5);
+  opacity: 0.8;
+}
